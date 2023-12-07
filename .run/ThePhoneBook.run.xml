@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ThePhoneBook" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="javafx" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ThePhoneBook.Main" />
+    <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/javafx-sdk-21/lib --add-modules=javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

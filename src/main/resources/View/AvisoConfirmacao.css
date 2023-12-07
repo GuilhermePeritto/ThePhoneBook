@@ -1,0 +1,43 @@
+.background {
+    -fx-background-color: #15152f;
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}
+
+.button-sim {
+    -fx-background-color: linear-gradient(to right, #cd3bca, #1f2a62);
+    -fx-text-fill: #fff;
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+    -fx-border-color: linear-gradient(to right, #1f2a62 ,#cd3bca);
+    -fx-border-radius: 15;
+}
+
+
+
+.button-nao {
+    -fx-background-color: #1f2a62;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+    -fx-border-color: linear-gradient(to right, #1f2a62 ,#cd3bca);
+    -fx-border-radius: 15;
+}
+
+.button-nao:hover {
+    -fx-background-color: #cd3bca;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+    -fx-border-color: linear-gradient(to right, #1f2a62 ,#cd3bca);
+    -fx-border-radius: 15;
+}
+
+.button-sim:hover {
+    -fx-background-color: #cd3bca;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+    -fx-border-color: linear-gradient(to right, #1f2a62 ,#cd3bca);
+    -fx-border-radius: 15;
+}
+

@@ -1,0 +1,7 @@
+.backgound-transparent {
+    -fx-background-color: rgba(0, 0, 0, 0.0);
+}
+
+.progress-indicator {
+    -fx-progress-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}

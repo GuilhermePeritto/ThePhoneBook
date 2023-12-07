@@ -1,0 +1,28 @@
+.background-transparente {
+    -fx-background-color: TRANSPARENT;
+}
+
+
+.background-cima {
+    -fx-background-color: #15152f;
+    -fx-border-color: #15152f, #8501E5, #8501E5, #15152f;
+}
+
+.background-baixo {
+    -fx-background-color: #15152f;
+    -fx-border-color: radial-gradient(center 50% 50%, radius 100%, #cd3bca, #532c89 ,#1f2a62);
+}
+
+.background-circulo {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #cd3bca, #532c89 ,#1f2a62);
+    -fx-background-radius: 50;
+    -fx-border-color: #8501E5;
+    -fx-border-radius: 50;
+}
+
+.button-ok {
+    -fx-background-color: linear-gradient(to right , #cd3bca ,#1f2a62);
+    -fx-text-fill: #fff;
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+}

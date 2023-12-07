@@ -1,0 +1,15 @@
+.transparent {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.button {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-cursor: pointer;
+}
+
+.background-list {
+    -fx-background-color: #15152f;
+    -fx-border-color: #1f2a62;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}

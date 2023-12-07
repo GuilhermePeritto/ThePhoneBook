@@ -1,0 +1,62 @@
+.background-custom {
+    -fx-background-color: #1d1e3d;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15px;
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}
+
+.button-invisivel {
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.transparent {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.button {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-cursor: pointer;
+}
+
+.background-list {
+    -fx-background-color: #15152f;
+    -fx-border-color: #1f2a62;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.menu-button .arrow-button .context-menu {
+    -fx-padding: 0; /* Remove o espaçamento interno */
+    -fx-background-color: transparent; /* Define a cor de fundo como transparente */
+}
+
+.menu-button .arrow {
+    -fx-padding: 0; /* Remove o espaçamento interno */
+    -fx-background-color: transparent; /* Define a cor de fundo como transparente */
+}
+
+.menu-button {
+    -fx-background-color: transparent; /* Define a cor de fundo como transparente */
+    -fx-text-fill: #ffffff;
+}
+/* Estilo do texto do botão */
+.menu-button .label {
+    -fx-text-fill: #ffffff; /* Cor do texto */
+}
+
+/* Estilo geral dos itens do menu */
+.menu-button .menu-item {
+    -fx-text-fill: #ffffff; /* Cor do texto dos itens do menu */
+    -fx-background-color: #1d1e3d; /* Cor de fundo dos itens do menu */
+}
+
+/* Estilo do item do menu quando selecionado */
+.menu-button .menu-item:hover {
+    -fx-background-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}
+
+.menu-button .context-menu {
+    -fx-background-color: #1d1e3d;
+    -fx-border-color:linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}
+

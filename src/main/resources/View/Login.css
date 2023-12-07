@@ -1,0 +1,61 @@
+.button {
+    -fx-border-radius: 20px; /* Isso define as bordas redondas */
+    -fx-text-decoration: none;
+    -fx-text-align: center;
+    -fx-font-weight: bold;
+    -fx-cursor: pointer;
+}
+
+/* Estilo padrão do fundo do botão (pode ser substituído) */
+.button-default {
+    -fx-background-color: #14161c; /* Cor de fundo padrão */
+    -fx-text-fill: #8501E5; /* Cor do texto no botão */
+    -fx-border-radius: 90px;
+    -fx-cursor: pointer;
+}
+
+/* Exemplo de estilo alternativo */
+.button-entrar {
+    -fx-background-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62);
+    /* Cor de fundo personalizada */
+    -fx-text-fill: #fff; /* Cor do texto no botão */
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+}
+
+/* Exemplo de estilo adicional */
+.button-registrar {
+    -fx-background-color: #14161c; /* Outra cor de fundo personalizada */
+    -fx-text-fill: #fff; /* Cor do texto no botão */
+    -fx-border-radius: 20px;
+    -fx-cursor: pointer;
+}
+
+button-registrar:pressed {
+    -fx-background-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 0);
+}
+
+.textfield {
+    -fx-padding: 8px; /* Ajuste o preenchimento conforme necessário */
+    -fx-border-radius: 20px; /* Isso define as bordas redondas */
+    -fx-border: 2px solid #8501E5; /* Cor da borda padrão */
+    -fx-font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Exemplo de estilo com cor de fundo personalizada */
+.textfield-custom {
+    -fx-background-color: #14161c; /* Cor de fundo personalizada */
+    -fx-text-fill: #FFFFFFFF; /* Cor do texto no textfield */
+    -fx-border-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62);
+   /* -fx-border-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62);/* Cor da borda personalizada */
+    -fx-border-radius: 20px; /* Isso define as bordas redondas */
+    -fx-padding: 0 16;
+}
+
+/* Exemplo de estilo adicional */
+.textfield-secondary {
+    -fx-background-color: #2ecc71; /* Outra cor de fundo personalizada */
+    -fx-text-fill: #fff; /* Cor do texto no textfield */
+    -fx-border-color: #27ae60; /* Outra cor de borda personalizada */
+}

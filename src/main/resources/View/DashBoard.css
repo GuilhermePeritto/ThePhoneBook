@@ -1,0 +1,106 @@
+.background-MenuSlider {
+    -fx-background-color: #1d1e3d;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+.background-dashboard {
+    -fx-background-color: #1d1e3d;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}
+
+.background {
+    -fx-background-color: #15152f;
+}
+
+.background-icones {
+    -fx-alignment: baseline-left;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+
+.background-icones:pressed {
+    -fx-background-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.background-icones:hover {
+    -fx-background-color: linear-gradient(to right, #cd3bca, #532c89, #1f2a62);
+}
+
+.background-icones:disabled {
+    -fx-background-color: #14161c;
+}
+
+.background-icones-dashboard {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+    -fx-border-color: linear-gradient(to right, #cd3bca, #532c89, #1f2a62);
+    -fx-border-radius: 20;
+}
+
+.background-icones-dashboard:pressed {
+    -fx-background-insets: 0, 2;
+    -fx-background-color: derive(#15152f, 20%);
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.background-icones-dashboard:hover {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 60%, #cd3bca, #1f2a62);
+}
+
+.background-barra-pesquisa {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+    -fx-text-fill: WHITE;
+}
+
+.icon {
+    -fx-background-color: rgba( 0, 0, 0, 0);
+}
+
+.transparent{
+    -fx-background-color: rgba( 0, 0, 0, 0);
+}
+
+.background-listview {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(to left, #1f2a62, #532c89, #cd3bca);
+}
+.list-cell:odd {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+}
+.list-cell:even {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+}
+.list-cell:filled:hover {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+}
+
+.background-button-slider {
+    -fx-background-color: #cd3bca;
+    -fx-background-radius: 100;
+}
+
+.background-searchbar-textfield {
+    -fx-border-color: rgba(0, 0, 0, 0);
+    -fx-text-fill: WHITE;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.background-searchbar-button {
+
+}

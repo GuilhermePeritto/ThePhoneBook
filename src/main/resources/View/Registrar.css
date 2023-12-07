@@ -1,0 +1,69 @@
+.textfield-custom {
+    -fx-background-color: #14161c; /* Cor de fundo personalizada */
+    -fx-text-fill: #FFFFFFFF; /* Cor do texto no textfield */
+    -fx-border-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62); /* Cor da borda personalizada */
+    -fx-border-radius: 20px; /* Isso define as bordas redondas */
+    -fx-padding: 0 16;
+}
+
+.textfield-invisivel {
+    -fx-background-color: rgba(0,0,0,0); /* Cor de fundo personalizada */
+    -fx-text-fill: #FFFFFFFF; /* Cor do texto no textfield */
+    -fx-border-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62); /* Cor da borda personalizada */
+    -fx-border-radius: 20px; /* Isso define as bordas redondas */
+    -fx-padding: 0 16;
+}
+
+.background-custom {
+    -fx-background-color: #15152f; /* Cor de fundo personalizada */
+    -fx-text-fill: #FFFFFFFF; /* Cor do texto no textfield */
+}
+
+.button-invisivel {
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.background-registrar {
+    -fx-background-color: #14161c; /* Cor de fundo personalizada */
+    -fx-text-fill: #FFFFFFFF; /* Cor do texto no textfield */
+}
+.background-imagem {
+    -fx-background-color: radial-gradient( center 70% 30%, radius 150%,#cd3bca, #532c89 ,#1f2a62);
+    -fx-background-radius: 0 15 15 0;
+}
+
+.button-Registrar {
+    -fx-background-color: linear-gradient(to right , #cd3bca, #532c89 ,#1f2a62); /* Cor de fundo personalizada */
+    -fx-text-fill: #fff; /* Cor do texto no botão */
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+}
+
+.button-Voltar {
+    -fx-background-color: #14161c; /* Cor de fundo personalizada */
+    -fx-text-fill: #8501E5; /* Cor do texto no botão */
+    -fx-background-radius: 50;
+    -fx-border-radius: 50px;
+    -fx-cursor: pointer;
+}
+
+.button-Voltar:hover {
+    -fx-background-color: #8501E5; /* Cor de fundo personalizada */
+    -fx-text-fill: #fff; /* Cor do texto no botão */
+    -fx-background-radius: 50;
+    -fx-cursor: pointer;
+}
+
+.button-google{
+    -fx-background-color: #fff; /* Cor de fundo personalizada */
+    -fx-text-fill: #000; /* Cor do texto no botão */
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+}
+
+.button-facebook{
+    -fx-background-color: #3b5998; /* Cor de fundo personalizada */
+    -fx-text-fill: #fff; /* Cor do texto no botão */
+    -fx-background-radius: 15;
+    -fx-cursor: pointer;
+}
