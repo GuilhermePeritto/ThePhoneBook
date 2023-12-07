@@ -42,16 +42,16 @@
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
-               <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="37.0">
-                     <image>
-                        <Image url="@../Image/telefoneContato.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
                <font>
                   <Font size="16.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0">
+                     <image>
+                        <Image url="@../Image/contato.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button fx:id="telefoneContatosBtn" centerShape="false" ellipsisString="" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ContatosBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
                <VBox.margin>
@@ -63,7 +63,7 @@
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="37.0">
                      <image>
-                        <Image url="@../Image/contato.png" />
+                        <Image url="@../Image/telefoneContato.png" />
                      </image>
                   </ImageView>
                </graphic>

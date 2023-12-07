@@ -1,15 +1,12 @@
 package com.example.ThePhoneBook.Controller;
 
 import com.example.ThePhoneBook.Main;
-import com.example.ThePhoneBook.Model.TelefoneContato;
-import com.example.ThePhoneBook.Model.Contato;
 import com.example.ThePhoneBook.Repository.TelefoneContatoRepository;
 import com.example.ThePhoneBook.Repository.ContatoRepository;
 import com.example.ThePhoneBook.Repository.UsuarioRepository;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -31,7 +28,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.List;
 
 @Component
 public class DashBoardController {
@@ -52,22 +48,22 @@ public class DashBoardController {
     private Line lineEspacamento;
 
     @FXML
-    private Button clientesBtn;
+    private Button telefoneContatosBtn;
 
     @FXML
     private Button perfilBtn;
 
     @FXML
-    private Button produtosBtn;
+    private Button contatosBtn;
 
     @FXML
-    private AnchorPane dashBoardTelefoneContatos;
+    private AnchorPane dashBoardTelefoneContato;
 
     @FXML
     private AnchorPane dashBoardConfiguracao;
 
     @FXML
-    private AnchorPane dashBoardContatos;
+    private AnchorPane dashBoardContato;
 
     @FXML
     private AnchorPane dashBoardListContato;
@@ -108,7 +104,7 @@ public class DashBoardController {
     private Integer itensPorPaginaTelefoneContato = 15;
     private Integer itensPorPaginaContato = 15;
 
-    private Integer produtosPorPagina = 8;
+    private Integer contatosPorPagina = 8;
 
     private ObservableList<Node> paginatedTelefoneContatos;
 
@@ -118,13 +114,13 @@ public class DashBoardController {
     private Pagination paginacaoContato;
 
     @Autowired
-    public TelefoneContatoRepository clienteRepository;
+    public TelefoneContatoRepository telefoneContatoRepository;
 
     @Autowired
     public UsuarioRepository usuarioRepository;
 
     @Autowired
-    public ContatoRepository produtoRepository;
+    public ContatoRepository contatoRepository;
 
     public static Scene dashBoardView;
 
@@ -149,16 +145,16 @@ public class DashBoardController {
         paginacaoContato.setPageFactory(this::createPageContato);
 
         // Calcula dinamicamente o número de itens por página para telefonecontatos com base no tamanho do componente
-        double clienteNodeHeight = 150.0; // Ajuste o tamanho médio desejado para cada nó de cliente
-        int numLinhasTelefoneContatos = (int) (dashBoardListTelefoneContato.getHeight() / clienteNodeHeight);
+        double telefoneContatoNodeHeight = 150.0; // Ajuste o tamanho médio desejado para cada nó de telefoneContato
+        int numLinhasTelefoneContatos = (int) (dashBoardListTelefoneContato.getHeight() / telefoneContatoNodeHeight);
 
         // Define o número de itens por página para telefonecontatos com base no número de linhas
         int itensPorPaginaTelefoneContatos = numLinhasTelefoneContatos;
         paginacaoTelefoneContato.setPageCount(1); // Apenas uma página para telefonecontatos
 
         // Calcula dinamicamente o número de itens por página para contatos com base na altura da tela
-        double produtoNodeHeight = 150.0; // Ajuste o tamanho médio desejado para cada nó de contato
-        int numLinhasContatos = (int) (Screen.getPrimary().getVisualBounds().getHeight() / produtoNodeHeight);
+        double contatoNodeHeight = 150.0; // Ajuste o tamanho médio desejado para cada nó de contato
+        int numLinhasContatos = (int) (Screen.getPrimary().getVisualBounds().getHeight() / contatoNodeHeight);
 
         itensPorPaginaTelefoneContato = 15;// Define o número de itens por página para contatos com base no número de linhas
         itensPorPaginaContato = numLinhasContatos;
@@ -197,28 +193,28 @@ public class DashBoardController {
 
     private void expandMenuSlider() {
         animateWidth(EXPANDED_WIDTH);
-        produtosBtn.setText("Contatos");
+        contatosBtn.setText("Contatos");
         configuracaoBtn.setText("Configurações");
         perfilBtn.setText("Perfil");
-        clientesBtn.setText("Telefones");
+        telefoneContatosBtn.setText("Telefones");
         homeBtn.setText("Home");
         logoutBtn.setText("Logout");
     }
 
     private void shrinkMenuSlider() {
         animateWidth(60.0);
-        produtosBtn.setText("");
+        contatosBtn.setText("");
         configuracaoBtn.setText("");
         perfilBtn.setText("");
-        clientesBtn.setText("");
+        telefoneContatosBtn.setText("");
         homeBtn.setText("");
         logoutBtn.setText("");
     }
 
     @FXML
     private void TelefoneContatosBtnEvent(ActionEvent event) {
-        this.showPane(dashBoardTelefoneContatos);
-        moduloLbl.setText("Telefones");
+        this.showPane(dashBoardTelefoneContato);
+        moduloLbl.setText("Contatos");
     }
 
     @FXML
@@ -250,8 +246,8 @@ public class DashBoardController {
 
     @FXML
     private void ContatosBtnEvent(ActionEvent event) {
-        this.showPane(dashBoardContatos);
-        moduloLbl.setText("Contatos");
+        this.showPane(dashBoardContato);
+        moduloLbl.setText("Telefones");
     }
 
     @FXML
@@ -271,8 +267,8 @@ public class DashBoardController {
 
     @FXML
     private void AdicionarContatoBtnEvent(ActionEvent event) throws IOException {
-        ContatoController produtoController = new ContatoController();
-        produtoController.start(new Stage());
+        ContatoController contatoController = new ContatoController();
+        contatoController.start(new Stage());
     }
 
     @FXML
@@ -287,9 +283,9 @@ public class DashBoardController {
 //        Thread consultaThread = new Thread(() -> {
 //            List<Contato> listaContatos;
 //            if (!pesquisaContatoTf.getText().isEmpty()) {
-//                listaContatos = produtoRepository.findByNomeContainingIgnoreCaseOrderByNomeAsc(pesquisaContatoTf.getText());
+//                listaContatos = contatoRepository.findByNomeContainingIgnoreCaseOrderByNomeAsc(pesquisaContatoTf.getText());
 //            } else {
-//                listaContatos = produtoRepository.findAllByOrderByNomeAsc();
+//                listaContatos = contatoRepository.findAllByOrderByNomeAsc();
 //            }
 //
 //            // Atualiza a UI na thread principal após a consulta
@@ -301,13 +297,13 @@ public class DashBoardController {
 //                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/ContatoList.fxml"));
 //                        BorderPane borderPane = fxmlLoader.load();
 //
-//                        ContatoListController produtoListController = fxmlLoader.getController();
-//                        produtoListController.setData((Contato) listaContatos.get(i));
+//                        ContatoListController contatoListController = fxmlLoader.getController();
+//                        contatoListController.setData((Contato) listaContatos.get(i));
 //
 //                        paginatedContatos.add(borderPane);
 //                    }
 //
-//                    int pageCount = (int) Math.ceil((double) paginatedContatos.size() / produtosPorPagina);
+//                    int pageCount = (int) Math.ceil((double) paginatedContatos.size() / contatosPorPagina);
 //                    paginacaoContato.setPageCount(pageCount);
 //                    paginacaoContato.setCurrentPageIndex(0);
 //                    paginacaoContato.setPageFactory(this::createPageContato);
@@ -344,9 +340,9 @@ public class DashBoardController {
 //        Thread consultaThread = new Thread(() -> {
 //            List<TelefoneContato> listaTelefoneContatos;
 //            if (!pesquisaTelefoneContatoTf.getText().isEmpty()) {
-//                listaTelefoneContatos = clienteRepository.findByNomeContainingIgnoreCaseOrderByNomeAsc(pesquisaTelefoneContatoTf.getText());
+//                listaTelefoneContatos = telefoneContatoRepository.findByNomeContainingIgnoreCaseOrderByNomeAsc(pesquisaTelefoneContatoTf.getText());
 //            } else {
-//                listaTelefoneContatos = clienteRepository.findAllByOrderByNomeAsc();
+//                listaTelefoneContatos = telefoneContatoRepository.findAllByOrderByNomeAsc();
 //            }
 //
 //            // Atualiza a UI na thread principal após a consulta
@@ -358,8 +354,8 @@ public class DashBoardController {
 //                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/TelefoneContatoList.fxml"));
 //                        BorderPane borderPane = fxmlLoader.load();
 //
-//                        TelefoneContatoListController clientesListController = fxmlLoader.getController();
-//                        clientesListController.setData((TelefoneContato) listaTelefoneContatos.get(i));
+//                        TelefoneContatoListController telefoneContatosListController = fxmlLoader.getController();
+//                        telefoneContatosListController.setData((TelefoneContato) listaTelefoneContatos.get(i));
 //
 //                        paginatedTelefoneContatos.add(borderPane);
 //                    }
@@ -395,8 +391,8 @@ public class DashBoardController {
 
     @FXML
     private void AdicionarTelefoneContatoBtnEvent(ActionEvent event) throws IOException {
-        TelefoneContatoController clienteController = new TelefoneContatoController();
-        clienteController.start(new Stage());
+        TelefoneContatoController telefoneContatoController = new TelefoneContatoController();
+        telefoneContatoController.start(new Stage());
     }
 
     private Node createPageTelefoneContato(int pageIndex) {
@@ -417,22 +413,22 @@ public class DashBoardController {
     }
 
     private Node createPageContato(int pageIndex) {
-        int fromIndex = pageIndex * produtosPorPagina;
-        int toIndex = Math.min(fromIndex + produtosPorPagina, paginatedContatos.size());
+        int fromIndex = pageIndex * contatosPorPagina;
+        int toIndex = Math.min(fromIndex + contatosPorPagina, paginatedContatos.size());
 
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(20));
         gridPane.setHgap(20);
         gridPane.setVgap(20);
 
-        double produtoNodeWidth = 150.0;
-        int numColunasContatos = (int) (dashBoardListContato.getPrefWidth() / (produtoNodeWidth + 20));
+        double contatoNodeWidth = 150.0;
+        int numColunasContatos = (int) (dashBoardListContato.getPrefWidth() / (contatoNodeWidth + 20));
 
         for (int i = fromIndex; i < toIndex; i++) {
-            Node produtoNode = paginatedContatos.get(i);
+            Node contatoNode = paginatedContatos.get(i);
             int col = (i - fromIndex) % numColunasContatos;
             int row = (i - fromIndex) / numColunasContatos;
-            gridPane.add(produtoNode, col, row);
+            gridPane.add(contatoNode, col, row);
         }
 
         ScrollPane scrollPane = new ScrollPane(gridPane);
@@ -458,9 +454,9 @@ public class DashBoardController {
 
 
     private void showPane(AnchorPane pane) {
-        dashBoardTelefoneContatos.setVisible(pane == dashBoardTelefoneContatos);
+        dashBoardTelefoneContato.setVisible(pane == dashBoardTelefoneContato);
         dashBoardConfiguracao.setVisible(pane == dashBoardConfiguracao);
-        dashBoardContatos.setVisible(pane == dashBoardContatos);
+        dashBoardContato.setVisible(pane == dashBoardContato);
         dashBoardHome.setVisible(pane == dashBoardHome);
         dashBoardPerfil.setVisible(pane == dashBoardPerfil);
         dashBoardListTelefoneContato.setVisible(pane == dashBoardListTelefoneContato);
@@ -474,7 +470,7 @@ public class DashBoardController {
         KeyFrame keyFrame = new KeyFrame(Duration.millis(300), keyValue);
         timeline.getKeyFrames().add(keyFrame);
 
-        KeyValue keyValuesTelefoneContatos = new KeyValue(clientesBtn.prefWidthProperty(), targetWidth);
+        KeyValue keyValuesTelefoneContatos = new KeyValue(telefoneContatosBtn.prefWidthProperty(), targetWidth);
         KeyFrame keyFrameTelefoneContatos = new KeyFrame(Duration.millis(300), keyValuesTelefoneContatos);
         timeline.getKeyFrames().add(keyFrameTelefoneContatos);
 
@@ -487,7 +483,7 @@ public class DashBoardController {
         timeline.getKeyFrames().add(keyFrameConfiguracao);
 
 
-        KeyValue keyValuesContatos = new KeyValue(produtosBtn.prefWidthProperty(), targetWidth);
+        KeyValue keyValuesContatos = new KeyValue(contatosBtn.prefWidthProperty(), targetWidth);
         KeyFrame keyFrameContatos = new KeyFrame(Duration.millis(300), keyValuesContatos);
         timeline.getKeyFrames().add(keyFrameContatos);
 
