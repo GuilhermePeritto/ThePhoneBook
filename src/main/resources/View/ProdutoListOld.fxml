@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="330.0" styleClass="background-custom" stylesheets="@ProdutoList.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.ContatoListController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="330.0" styleClass="background-custom" stylesheets="@ContatoList.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.ContatoListController">
    <bottom>
       <HBox prefHeight="46.0" prefWidth="245.0" BorderPane.alignment="CENTER">
          <children>
@@ -36,7 +36,7 @@
    <top>
       <AnchorPane prefHeight="55.0" prefWidth="245.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" styleClass="button-invisivel" stylesheets="@ProdutoList.css">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" styleClass="button-invisivel" stylesheets="@ContatoList.css">
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="34.0">
                      <image>
@@ -45,7 +45,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="7.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" styleClass="button-invisivel" stylesheets="@ProdutoList.css">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="7.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" styleClass="button-invisivel" stylesheets="@ContatoList.css">
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="34.0">
                      <image>

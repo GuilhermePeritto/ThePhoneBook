@@ -22,45 +22,21 @@ public class TelefoneContatoListController {
     private Button excluirTelefoneContatoBtn;
 
     @FXML
-    private Label nomeTelefoneContatoLbl;
-
-    @FXML
-    private Label emailTelefoneContatoLbl;
+    private Label dddTelefoneContatoLbl;
 
     @FXML
     private Label telefoneTelefoneContatoLbl;
 
-    private Label ufCb;
-
-    private Label cidadeCb;
-
-    private Label cepLbl;
-
-    private Label complementoLbl;
-
-    private Label numeroLbl;
-
-    private Label enderecoLbl;
-
-    private Label emailLbl;
-
-    private Label outroContatoLbl;
-
-    private Label cpfLbl;
-
-    private Label dataNascLbl;
-
-    private Label whatsLbl;
-
-    private Label nomeLbl;
+    @FXML
+    private Label emailTelefoneContatoLbl;
 
     private TelefoneContato telefoneContato;
 
     public void setData(TelefoneContato telefoneContato) {
         this.telefoneContato = telefoneContato;
-        nomeTelefoneContatoLbl.setText(telefoneContato.getNome());
+        dddTelefoneContatoLbl.setText(telefoneContato.getDdd());
+        telefoneTelefoneContatoLbl.setText(telefoneContato.getTelefone());
         emailTelefoneContatoLbl.setText(telefoneContato.getEmail());
-        telefoneTelefoneContatoLbl.setText(telefoneContato.getWhatsapp());
     }
 
     @FXML

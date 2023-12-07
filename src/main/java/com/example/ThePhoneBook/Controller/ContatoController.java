@@ -23,6 +23,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
@@ -34,7 +35,7 @@ public class ContatoController {
     private Button btnEditarImagem;
 
     @FXML
-    private TextField descricaoLbl;
+    private TextField observacaoLbl;
 
     @FXML
     private ImageView imgContato;
@@ -43,19 +44,13 @@ public class ContatoController {
     private TextField nomeLbl;
 
     @FXML
-    private TextField quantLbl;
-
-    @FXML
     private BorderPane backgroundImagem;
-
-    @FXML
-    private TextField valorLbl;
 
     private ConfigurableApplicationContext springContext = Main.getContext();
 
     private static Contato contato;
 
-    private Long idContato;
+    private BigInteger idContato;
 
     @FXML
     private Button btnSalvar;
@@ -105,11 +100,9 @@ public class ContatoController {
         if(contato == null) {
             return;
         }
-        nomeLbl.setText(contato.getNome());
-        descricaoLbl.setText(contato.getDescricao());
-        quantLbl.setText(contato.getQuantidade());
-        valorLbl.setText(contato.getValor());
-        imgContato.setImage(new Image("file:" + contato.getLocalDaImagem()));
+        nomeLbl.setText(contato.getDescricao());
+        observacaoLbl.setText(contato.getObservacao());
+        imgContato.setImage(new Image("file:" + contato.getLocalImagem()));
         idContato = contato.getIdContato();
         setData(contato);
     }
@@ -155,11 +148,9 @@ public class ContatoController {
 
     @FXML
     public void salvarContato(ActionEvent event) throws IOException {
-        contato.setNome(nomeLbl.getText());
-        contato.setDescricao(descricaoLbl.getText());
-        contato.setQuantidade(quantLbl.getText());
-        contato.setValor(valorLbl.getText());
-        contato.setLocalDaImagem(LocalDaImagem);
+        contato.setDescricao(nomeLbl.getText());
+        contato.setObservacao(observacaoLbl.getText());
+        contato.setLocalImagem(LocalDaImagem);
         contatoRepository.save(contato);
         contato = new Contato();
         voltar(event);
@@ -196,9 +187,7 @@ public class ContatoController {
     public void desabilitarCampos(Boolean desabilitar) {
         if (desabilitar) {
             nomeLbl.setDisable(true);
-            descricaoLbl.setDisable(true);
-            quantLbl.setDisable(true);
-            valorLbl.setDisable(true);
+            observacaoLbl.setDisable(true);
             btnEditarImagem.setDisable(true);
             btnSalvar.setDisable(true);
         }

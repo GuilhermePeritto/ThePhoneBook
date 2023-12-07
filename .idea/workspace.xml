@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="subindo cruds" />
+    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="subindo cruds">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Cliente.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContato.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Cliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContato.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ClienteList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContatoList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ClienteList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContatoList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/DashBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/DashBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Produto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Contato.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Produto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Contato.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ProdutoList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ContatoList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ProdutoList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ContatoList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ProdutoListNewOld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ProdutoListNewOld.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ProdutoListOld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ProdutoListOld.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +56,7 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2Wj8DwF83vqVE8DdPFS95coNcxp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -95,7 +115,7 @@
       <workItem from="1701956685975" duration="3407000" />
       <workItem from="1701961395283" duration="31000" />
       <workItem from="1701968911470" duration="34000" />
-      <workItem from="1701969164515" duration="852000" />
+      <workItem from="1701969164515" duration="2342000" />
     </task>
     <task id="LOCAL-00001" summary="Ajustes Cor da aplicação">
       <option name="closed" value="true" />

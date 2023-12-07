@@ -21,15 +21,18 @@ public class Contato {
     @Column(name = "observ")
     private String observacao;
 
+    private String localImagem;
+
     public Contato() {
 
     }
 
-    public Contato(BigInteger idContato, String descricao, Date dataNascimento, String observacao) {
+    public Contato(BigInteger idContato, String descricao, Date dataNascimento, String observacao, String localImagem) {
         this.idContato = idContato;
         this.descricao = descricao;
         this.dataNascimento = dataNascimento;
         this.observacao = observacao;
+        this.localImagem = localImagem;
     }
 
     public BigInteger getIdContato() {
@@ -62,6 +65,14 @@ public class Contato {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public String getLocalImagem() {
+        return localImagem;
+    }
+
+    public void setLocalImagem(String localImagem) {
+        this.localImagem = localImagem;
     }
 
     @Override

@@ -70,7 +70,7 @@ public class DashBoardController {
     private AnchorPane dashBoardContatos;
 
     @FXML
-    private AnchorPane dashBoardListContatos;
+    private AnchorPane dashBoardListContato;
 
     @FXML
     private AnchorPane dashBoardHome;
@@ -263,7 +263,7 @@ public class DashBoardController {
 
     @FXML
     private void ListaContatosBtnEvent(ActionEvent event) throws IOException {
-        this.showPane(dashBoardListContatos);
+        this.showPane(dashBoardListContato);
         paginacaoTelefoneContato.setVisible(false);
         paginacaoContato.setVisible(true);
 
@@ -426,7 +426,7 @@ public class DashBoardController {
         gridPane.setVgap(20);
 
         double produtoNodeWidth = 150.0;
-        int numColunasContatos = (int) (dashBoardListContatos.getPrefWidth() / (produtoNodeWidth + 20));
+        int numColunasContatos = (int) (dashBoardListContato.getPrefWidth() / (produtoNodeWidth + 20));
 
         for (int i = fromIndex; i < toIndex; i++) {
             Node produtoNode = paginatedContatos.get(i);
@@ -464,7 +464,7 @@ public class DashBoardController {
         dashBoardHome.setVisible(pane == dashBoardHome);
         dashBoardPerfil.setVisible(pane == dashBoardPerfil);
         dashBoardListTelefoneContato.setVisible(pane == dashBoardListTelefoneContato);
-        dashBoardListContatos.setVisible(pane == dashBoardListContatos);
+        dashBoardListContato.setVisible(pane == dashBoardListContato);
     }
 
 

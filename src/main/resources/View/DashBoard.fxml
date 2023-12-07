@@ -38,14 +38,14 @@
                   <Insets top="70.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="contatosBtn" centerShape="false" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ProdutosBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE">
+            <Button fx:id="contatosBtn" centerShape="false" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#TelefoneContatosBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="37.0">
                      <image>
-                        <Image url="@../Image/produtos.png" />
+                        <Image url="@../Image/telefoneContato.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -53,7 +53,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="telefoneContatosBtn" centerShape="false" ellipsisString="" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ClientesBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
+            <Button fx:id="telefoneContatosBtn" centerShape="false" ellipsisString="" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ContatosBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
@@ -63,7 +63,7 @@
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="37.0">
                      <image>
-                        <Image url="@../Image/clientes.png" />
+                        <Image url="@../Image/contato.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -131,11 +131,11 @@
                <children>
                   <AnchorPane fx:id="dashBoardConfiguracao" prefHeight="885.0" prefWidth="1840.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="listaProdutosBtn1" contentDisplay="TOP" ellipsisString="" layoutX="84.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Grupos" textFill="WHITE">
+                        <Button fx:id="listaTelefoneContatosBtn1" contentDisplay="TOP" ellipsisString="" layoutX="84.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Grupos" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
-                                    <Image url="@../Image/cliente.png" />
+                                    <Image url="@../Image/contato.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -146,7 +146,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="relatorioProdutosBtn1" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
+                        <Button fx:id="relatorioTelefoneContatosBtn1" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
@@ -165,11 +165,11 @@
                   </AnchorPane>
                   <AnchorPane fx:id="dashBoardContato" prefHeight="885.0" prefWidth="1840.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="listaProdutosBtn" contentDisplay="TOP" ellipsisString="" layoutX="84.0" layoutY="27.0" mnemonicParsing="false" onAction="#ListaProdutosBtnEvent" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Produtos" textFill="WHITE">
+                        <Button fx:id="listaTelefoneContatosBtn" contentDisplay="TOP" ellipsisString="" layoutX="84.0" layoutY="27.0" mnemonicParsing="false" onAction="#ListaTelefoneContatosBtnEvent" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="TelefoneContatos" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
-                                    <Image url="@../Image/produtos.png" />
+                                    <Image url="@../Image/telefoneContato.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -180,7 +180,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="relatorioProdutosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
+                        <Button fx:id="relatorioTelefoneContatosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
@@ -199,11 +199,11 @@
                   </AnchorPane>
                   <AnchorPane fx:id="dashBoardTelefoneContato" layoutX="-11.0" prefHeight="493.0" prefWidth="691.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="listaClientesBtn" contentDisplay="TOP" ellipsisString="" layoutX="84.0" layoutY="27.0" mnemonicParsing="false" onAction="#ListaClientesBtnEvent" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Clientes" textFill="WHITE">
+                        <Button fx:id="listaContatosBtn" contentDisplay="TOP" ellipsisString="" layoutX="84.0" layoutY="27.0" mnemonicParsing="false" onAction="#ListaContatosBtnEvent" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Contatos" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
-                                    <Image url="@../Image/cliente.png" />
+                                    <Image url="@../Image/contato.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -214,7 +214,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="relatorioClientesBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
+                        <Button fx:id="relatorioContatosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
@@ -233,11 +233,11 @@
                   </AnchorPane>
                   <AnchorPane fx:id="dashBoardPerfil" layoutX="10.0" layoutY="10.0" prefHeight="895.0" prefWidth="1850.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <AnchorPane fx:id="dashBoardHome" layoutX="10.0" layoutY="10.0" prefHeight="895.0" prefWidth="1850.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <AnchorPane fx:id="dashBoardListCliente" prefHeight="493.0" prefWidth="691.0" styleClass="background-dashboard" stylesheets="@DashBoard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="dashBoardListContato" prefHeight="493.0" prefWidth="691.0" styleClass="background-dashboard" stylesheets="@DashBoard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <HBox fillHeight="false" layoutX="7.0" layoutY="14.0" prefHeight="56.0" prefWidth="682.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="14.0">
                            <children>
-                              <Button fx:id="adicionarClienteBtn" ellipsisString="" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#AdicionarClienteBtnEvent" prefHeight="56.0" prefWidth="54.0" styleClass="background-button-slider" stylesheets="@DashBoard.css" text="Cadastrar Cliente" textFill="WHITE" textOverrun="CLIP">
+                              <Button fx:id="adicionarContatoBtn" ellipsisString="" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#AdicionarContatoBtnEvent" prefHeight="56.0" prefWidth="54.0" styleClass="background-button-slider" stylesheets="@DashBoard.css" text="Cadastrar Contato" textFill="WHITE" textOverrun="CLIP">
                                  <HBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" />
                                  </HBox.margin>
@@ -251,7 +251,7 @@
                               </Button>
                               <HBox prefHeight="47.0" prefWidth="379.0" styleClass="background-barra-pesquisa" stylesheets="@DashBoard.css">
                                  <children>
-                                    <TextField fx:id="pesquisaClienteTf" prefHeight="46.0" prefWidth="323.0" promptText="Pesquisar cliente" styleClass="background-searchbar-textfield" stylesheets="@DashBoard.css">
+                                    <TextField fx:id="pesquisaContatoTf" prefHeight="46.0" prefWidth="323.0" promptText="Pesquisar contato" styleClass="background-searchbar-textfield" stylesheets="@DashBoard.css">
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin>
@@ -259,7 +259,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <Button fx:id="pesquisarClientesBtn" minWidth="42.0" mnemonicParsing="false" onAction="#PesquisarClientesBtnEvent" prefHeight="47.0" prefWidth="42.0" styleClass="icon" stylesheets="@DashBoard.css">
+                                    <Button fx:id="pesquisarContatosBtn" minWidth="42.0" mnemonicParsing="false" onAction="#PesquisarContatosBtnEvent" prefHeight="47.0" prefWidth="42.0" styleClass="icon" stylesheets="@DashBoard.css">
                                        <graphic>
                                           <ImageView fitHeight="32.0" fitWidth="32.0">
                                              <image>
@@ -279,19 +279,19 @@
                            </children>
                         </HBox>
                         <HBox layoutX="3.0" layoutY="429.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="61.0" prefWidth="690.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="428.0" />
-                        <AnchorPane fx:id="listCliente" layoutX="3.0" layoutY="104.0" prefHeight="386.0" prefWidth="690.0" styleClass="background-listview" stylesheets="@DashBoard.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="103.0">
+                        <AnchorPane fx:id="listContato" layoutX="3.0" layoutY="104.0" prefHeight="386.0" prefWidth="690.0" styleClass="background-listview" stylesheets="@DashBoard.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="103.0">
                            <children>
-                              <Pagination fx:id="paginacaoCliente" layoutX="241.0" layoutY="101.0" maxPageIndicatorCount="3" prefHeight="381.0" prefWidth="682.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Pagination fx:id="paginacaoContato" layoutX="241.0" layoutY="101.0" maxPageIndicatorCount="3" prefHeight="381.0" prefWidth="682.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="dashBoardListGrupo" prefHeight="485.0" prefWidth="696.0" stylesheets="@DashBoard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <AnchorPane fx:id="dashBoardListProdutos" layoutX="10.0" layoutY="10.0" prefHeight="505.0" prefWidth="703.0" styleClass="background-dashboard" stylesheets="@DashBoard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="dashBoardListTelefoneContato" layoutX="10.0" layoutY="10.0" prefHeight="505.0" prefWidth="703.0" styleClass="background-dashboard" stylesheets="@DashBoard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <HBox fillHeight="false" layoutX="7.0" layoutY="14.0" prefHeight="56.0" prefWidth="682.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="14.0">
                            <children>
-                              <Button fx:id="adicionarProdutoBtn" ellipsisString="" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#AdicionarProdutoBtnEvent" prefHeight="56.0" prefWidth="54.0" styleClass="background-button-slider" stylesheets="@DashBoard.css" text="Cadastrar Produto" textFill="WHITE" textOverrun="CLIP">
+                              <Button fx:id="adicionarTelefoneContatoBtn" ellipsisString="" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#AdicionarTelefoneContatoBtnEvent" prefHeight="56.0" prefWidth="54.0" styleClass="background-button-slider" stylesheets="@DashBoard.css" text="Cadastrar TelefoneContato" textFill="WHITE" textOverrun="CLIP">
                                  <HBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" />
                                  </HBox.margin>
@@ -305,7 +305,7 @@
                               </Button>
                               <HBox prefHeight="47.0" prefWidth="379.0" styleClass="background-barra-pesquisa" stylesheets="@DashBoard.css">
                                  <children>
-                                    <TextField fx:id="pesquisaProdutoTf" prefHeight="46.0" prefWidth="323.0" promptText="Pesquisar produto" styleClass="background-searchbar-textfield" stylesheets="@DashBoard.css">
+                                    <TextField fx:id="pesquisaTelefoneContatoTf" prefHeight="46.0" prefWidth="323.0" promptText="Pesquisar telefoneContato" styleClass="background-searchbar-textfield" stylesheets="@DashBoard.css">
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin>
@@ -313,7 +313,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <Button fx:id="pesquisarProdutoBtn" minWidth="42.0" mnemonicParsing="false" onAction="#PesquisarProdutosBtnEvent" prefHeight="47.0" prefWidth="42.0" styleClass="icon" stylesheets="@DashBoard.css">
+                                    <Button fx:id="pesquisarTelefoneContatoBtn" minWidth="42.0" mnemonicParsing="false" onAction="#PesquisarTelefoneContatosBtnEvent" prefHeight="47.0" prefWidth="42.0" styleClass="icon" stylesheets="@DashBoard.css">
                                        <graphic>
                                           <ImageView fitHeight="32.0" fitWidth="32.0">
                                              <image>
@@ -333,14 +333,14 @@
                            </children>
                         </HBox>
                         <HBox layoutX="3.0" layoutY="429.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="61.0" prefWidth="690.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="428.0" />
-                        <AnchorPane fx:id="listProduto" layoutX="3.0" layoutY="104.0" prefHeight="386.0" prefWidth="690.0" styleClass="background-listview" stylesheets="@DashBoard.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="103.0">
+                        <AnchorPane fx:id="listTelefoneContato" layoutX="3.0" layoutY="104.0" prefHeight="386.0" prefWidth="690.0" styleClass="background-listview" stylesheets="@DashBoard.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="103.0">
                            <children>
-                              <Pagination fx:id="paginacaoProduto" layoutX="241.0" layoutY="101.0" maxPageIndicatorCount="3" prefHeight="381.0" prefWidth="682.0" styleClass="background-listview" stylesheets="@DashBoard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Pagination fx:id="paginacaoTelefoneContato" layoutX="241.0" layoutY="101.0" maxPageIndicatorCount="3" prefHeight="381.0" prefWidth="682.0" styleClass="background-listview" stylesheets="@DashBoard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="dashBoardRelClientes" layoutX="-1.0" layoutY="10.0" prefHeight="506.4" prefWidth="695.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="dashBoardRelContatos" layoutX="-1.0" layoutY="10.0" prefHeight="506.4" prefWidth="695.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
                <opaqueInsets>
                   <Insets />
@@ -367,7 +367,7 @@
                         </Circle>
                         <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="306.0" styleClass="background-barra-pesquisa" stylesheets="@DashBoard.css">
                            <children>
-                              <TextField fx:id="pesquisaClienteTf1" prefHeight="46.0" prefWidth="323.0" promptText="Pesquisar módulo" styleClass="background-searchbar-textfield" stylesheets="@DashBoard.css">
+                              <TextField fx:id="pesquisaContatoTf1" prefHeight="46.0" prefWidth="323.0" promptText="Pesquisar módulo" styleClass="background-searchbar-textfield" stylesheets="@DashBoard.css">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>

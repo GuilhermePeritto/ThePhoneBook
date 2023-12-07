@@ -15,9 +15,6 @@ import java.io.IOException;
 public class ContatoListController {
 
     @FXML
-    private Label ValorContatoLbl;
-
-    @FXML
     private Button btnInspecionarContato;
 
     @FXML
@@ -76,9 +73,8 @@ public class ContatoListController {
 
     public void setData(Contato contato) {
         this.contato = contato;
-        nomeContatoLbl.setText(contato.getNome());
-        ValorContatoLbl.setText(contato.getValor().toString());
-        imgContato.setImage(new Image("File:" + contato.getLocalDaImagem()));
+        nomeContatoLbl.setText(contato.getDescricao());
+        imgContato.setImage(new Image("File:" + contato.getLocalImagem()));
     }
 
     @FXML

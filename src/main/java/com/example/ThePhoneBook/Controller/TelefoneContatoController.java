@@ -22,40 +22,13 @@ public class TelefoneContatoController {
     private ConfigurableApplicationContext springContext = Main.getContext();
 
     @FXML
-    private TextField cepLbl;
-
-    @FXML
-    private ComboBox<String> cidadeCb;
-
-    @FXML
-    private TextField complementoLbl;
-
-    @FXML
-    private TextField cpfLbl;
-
-    @FXML
-    private DatePicker dataNascLbl;
-
-    @FXML
     private TextField emailLbl;
 
     @FXML
-    private TextField enderecoLbl;
+    private TextField dddLbl;
 
     @FXML
-    private TextField nomeLbl;
-
-    @FXML
-    private TextField numeroLbl;
-
-    @FXML
-    private TextField outroContatoLbl;
-
-    @FXML
-    private ComboBox<String> ufCb;
-
-    @FXML
-    private TextField whatsLbl;
+    private TextField telefoneLbl;
 
     @Autowired
     TelefoneContatoRepository telefoneContatoRepository;
@@ -63,24 +36,6 @@ public class TelefoneContatoController {
     public static TelefoneContato telefoneContato;
 
     public Boolean desabilitar = false;
-
-    @FXML
-    public void initialize() {
-        // Preencher o ComboBox de cidades
-        cidadeCb.getItems().addAll(
-                "São Paulo",
-                "Rio de Janeiro",
-                "Belo Horizonte",
-                "Salvador",
-                "Brasília"
-        );
-
-        // Preencher o ComboBox de UFs
-        ufCb.getItems().addAll(
-                "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE",
-                "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
-        );
-    }
 
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoaderTelefoneContato = new FXMLLoader(getClass().getClassLoader().getResource("View/TelefoneContato.fxml"));
@@ -111,18 +66,9 @@ public class TelefoneContatoController {
     public void salvar(ActionEvent event) {
         AvisoController avisoController = new AvisoController();
         try {
-            telefoneContato.setNome(nomeLbl.getText());
-            telefoneContato.setCpf(cpfLbl.getText());
-            telefoneContato.setWhatsapp(whatsLbl.getText());
-            telefoneContato.setOutroContato(outroContatoLbl.getText());
+            telefoneContato.setTelefone(telefoneLbl.getText());
+            telefoneContato.setDdd(dddLbl.getText());
             telefoneContato.setEmail(emailLbl.getText());
-            telefoneContato.setDataNascimento(dataNascLbl.getValue());
-            telefoneContato.setEndereco(enderecoLbl.getText());
-            telefoneContato.setNumero(numeroLbl.getText());
-            telefoneContato.setComplemento(complementoLbl.getText());
-            telefoneContato.setCep(cepLbl.getText());
-            telefoneContato.setCidade(cidadeCb.getValue());
-            telefoneContato.setUf(ufCb.getValue());
             telefoneContatoRepository.save(telefoneContato);
             telefoneContato = new TelefoneContato(); //nao remover pelo amor de deus, se tirar isso, o telefoneContato vai ser criado com o nome do ultimo telefoneContato selecionado
             fecharTela(event);
@@ -138,19 +84,9 @@ public class TelefoneContatoController {
         if(telefoneContato == null) {
             return;
         }
-        nomeLbl.setText(telefoneContato.getNome());
-        cpfLbl.setText(telefoneContato.getCpf());
-        whatsLbl.setText(telefoneContato.getWhatsapp());
-        outroContatoLbl.setText(telefoneContato.getOutroContato());
+        telefoneLbl.setText(telefoneContato.getTelefone());
+        dddLbl.setText(telefoneContato.getDdd());
         emailLbl.setText(telefoneContato.getEmail());
-        dataNascLbl.setValue(telefoneContato.getDataNascimento());
-        enderecoLbl.setText(telefoneContato.getEndereco());
-        numeroLbl.setText(telefoneContato.getNumero());
-        complementoLbl.setText(telefoneContato.getComplemento());
-        cepLbl.setText(telefoneContato.getCep());
-        // Define os valores nos ComboBoxes
-        cidadeCb.setValue(telefoneContato.getCidade());
-        ufCb.setValue(telefoneContato.getUf());
     }
 
     public void excluiTelefoneContato() {
@@ -173,18 +109,9 @@ public class TelefoneContatoController {
 
     public void desabilitarCampos(Boolean desabilitar) {
         if (desabilitar) {
-            nomeLbl.setDisable(true);
-            cpfLbl.setDisable(true);
-            whatsLbl.setDisable(true);
-            outroContatoLbl.setDisable(true);
+            telefoneLbl.setDisable(true);
+            dddLbl.setDisable(true);
             emailLbl.setDisable(true);
-            dataNascLbl.setDisable(true);
-            enderecoLbl.setDisable(true);
-            numeroLbl.setDisable(true);
-            complementoLbl.setDisable(true);
-            cepLbl.setDisable(true);
-            cidadeCb.setDisable(true);
-            ufCb.setDisable(true);
         }
     }
 
