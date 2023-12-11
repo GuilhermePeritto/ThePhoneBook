@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="ajustando cruds">
+    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="melhorando sistema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/TelefoneContato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/TelefoneContato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Contato.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Contato.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Contato.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Contato.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ContatoList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ContatoList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ProdutoListNewOld.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ProdutoListOld.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/TelefoneContato.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContato.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/TelefoneContato.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContato.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/ThePhoneBook.run.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +101,7 @@
       <workItem from="1701968911470" duration="34000" />
       <workItem from="1701969164515" duration="4117000" />
       <workItem from="1701982882987" duration="853000" />
-      <workItem from="1702302019310" duration="12947000" />
+      <workItem from="1702302019310" duration="14192000" />
     </task>
     <task id="LOCAL-00001" summary="Ajustes Cor da aplicação">
       <option name="closed" value="true" />
@@ -202,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702303186213</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="melhorando sistema">
+      <option name="closed" value="true" />
+      <created>1702327384386</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702327384386</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +213,8 @@
     <MESSAGE value="subindo cruds" />
     <MESSAGE value="alterando classes" />
     <MESSAGE value="ajustando cruds" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajustando cruds" />
+    <MESSAGE value="melhorando sistema" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhorando sistema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
