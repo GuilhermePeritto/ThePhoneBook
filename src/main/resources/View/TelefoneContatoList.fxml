@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefWidth="685.0" styleClass="background-list" stylesheets="@TelefoneContatoList.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.TelefoneContatoListController">
+<BorderPane prefWidth="685.0" styleClass="background-list" stylesheets="@TelefoneContatoList.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.TelefoneContatoListController">
    <right>
       <HBox prefHeight="55.0" prefWidth="102.0" BorderPane.alignment="CENTER">
          <children>
@@ -50,12 +50,17 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="telefoneTelefoneContatoLbl" prefHeight="55.0" prefWidth="191.0" text="Label" textFill="WHITE">
+            <Label fx:id="telefoneTelefoneContatoLbl" prefHeight="55.0" prefWidth="136.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <Label fx:id="emailTelefoneContatoLbl" prefHeight="55.0" prefWidth="175.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="contatoLbl" prefHeight="55.0" prefWidth="175.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>

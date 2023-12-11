@@ -22,6 +22,9 @@ public class TelefoneContatoListController {
     private Button excluirTelefoneContatoBtn;
 
     @FXML
+    private Label contatoLbl;
+
+    @FXML
     private Label dddTelefoneContatoLbl;
 
     @FXML
@@ -37,6 +40,7 @@ public class TelefoneContatoListController {
         dddTelefoneContatoLbl.setText(telefoneContato.getDdd());
         telefoneTelefoneContatoLbl.setText(telefoneContato.getTelefone());
         emailTelefoneContatoLbl.setText(telefoneContato.getEmail());
+        contatoLbl.setText(telefoneContato.getContato().getDescricao());
     }
 
     @FXML

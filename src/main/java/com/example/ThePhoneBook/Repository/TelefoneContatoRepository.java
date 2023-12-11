@@ -8,6 +8,5 @@ import java.util.List;
 public interface TelefoneContatoRepository extends JpaRepository<TelefoneContato, Long> {
 
     List<TelefoneContato> findByTelefoneContainingIgnoreCaseOrderByDddAsc(String telefone);
-
     List<TelefoneContato> findAllByOrderByTelefoneAsc();
 }
