@@ -33,7 +33,7 @@ public class TelefoneContatoController {
     @Autowired
     TelefoneContatoRepository telefoneContatoRepository;
 
-    public static TelefoneContato telefoneContato;
+    public static TelefoneContato telefoneContato = new TelefoneContato();
 
     public Boolean desabilitar = false;
 

@@ -48,7 +48,7 @@ public class ContatoController {
 
     private ConfigurableApplicationContext springContext = Main.getContext();
 
-    private static Contato contato;
+    private static Contato contato = new Contato();
 
     private BigInteger idContato;
 

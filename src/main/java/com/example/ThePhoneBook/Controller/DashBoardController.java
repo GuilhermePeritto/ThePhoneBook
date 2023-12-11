@@ -1,12 +1,15 @@
 package com.example.ThePhoneBook.Controller;
 
 import com.example.ThePhoneBook.Main;
+import com.example.ThePhoneBook.Model.Contato;
+import com.example.ThePhoneBook.Model.TelefoneContato;
 import com.example.ThePhoneBook.Repository.TelefoneContatoRepository;
 import com.example.ThePhoneBook.Repository.ContatoRepository;
 import com.example.ThePhoneBook.Repository.UsuarioRepository;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,6 +31,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.List;
 
 @Component
 public class DashBoardController {
@@ -273,114 +277,114 @@ public class DashBoardController {
 
     @FXML
     public void PesquisarContatosBtnEvent(ActionEvent event) throws IOException {
-//        LoadingController loadingController = new LoadingController();
-//        Stage loadingStage = new Stage();
-//
-//        // Inicia o loading
-//        loadingController.iniciaLoading(loadingStage);
-//
-//        // Cria uma thread para realizar a consulta em segundo plano
-//        Thread consultaThread = new Thread(() -> {
-//            List<Contato> listaContatos;
-//            if (!pesquisaContatoTf.getText().isEmpty()) {
-//                listaContatos = contatoRepository.findByNomeContainingIgnoreCaseOrderByNomeAsc(pesquisaContatoTf.getText());
-//            } else {
-//                listaContatos = contatoRepository.findAllByOrderByNomeAsc();
-//            }
-//
-//            // Atualiza a UI na thread principal após a consulta
-//            Platform.runLater(() -> {
-//                try {
-//                    // Preenche a lista paginada
-//                    paginatedContatos.clear();
-//                    for (int i = 0; i < listaContatos.size(); i++) {
-//                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/ContatoList.fxml"));
-//                        BorderPane borderPane = fxmlLoader.load();
-//
-//                        ContatoListController contatoListController = fxmlLoader.getController();
-//                        contatoListController.setData((Contato) listaContatos.get(i));
-//
-//                        paginatedContatos.add(borderPane);
-//                    }
-//
-//                    int pageCount = (int) Math.ceil((double) paginatedContatos.size() / contatosPorPagina);
-//                    paginacaoContato.setPageCount(pageCount);
-//                    paginacaoContato.setCurrentPageIndex(0);
-//                    paginacaoContato.setPageFactory(this::createPageContato);
-//
-//                    // Mostra a paginação
-//                    paginacaoContato.setVisible(true);
-//
-//
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                } finally {
-//                    // Fecha o loading após a consulta
-//                    loadingController.fecharLoading(loadingStage);
-//                    trocarPaginas(paginacaoContato);
-//                }
-//            });
-//        });
-//
-//        // Inicia a thread de consulta
-//        consultaThread.start();
+        LoadingController loadingController = new LoadingController();
+        Stage loadingStage = new Stage();
+
+        // Inicia o loading
+        loadingController.iniciaLoading(loadingStage);
+
+        // Cria uma thread para realizar a consulta em segundo plano
+        Thread consultaThread = new Thread(() -> {
+            List<Contato> listaContatos;
+            if (!pesquisaContatoTf.getText().isEmpty()) {
+                listaContatos = contatoRepository.findByDescricaoContainingIgnoreCaseOrderByDescricaoAsc(pesquisaContatoTf.getText());
+            } else {
+                listaContatos = contatoRepository.findAllByOrderByDescricaoAsc();
+            }
+
+            // Atualiza a UI na thread principal após a consulta
+            Platform.runLater(() -> {
+                try {
+                    // Preenche a lista paginada
+                    paginatedContatos.clear();
+                    for (int i = 0; i < listaContatos.size(); i++) {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/ContatoList.fxml"));
+                        BorderPane borderPane = fxmlLoader.load();
+
+                        ContatoListController contatoListController = fxmlLoader.getController();
+                        contatoListController.setData((Contato) listaContatos.get(i));
+
+                        paginatedContatos.add(borderPane);
+                    }
+
+                    int pageCount = (int) Math.ceil((double) paginatedContatos.size() / contatosPorPagina);
+                    paginacaoContato.setPageCount(pageCount);
+                    paginacaoContato.setCurrentPageIndex(0);
+                    paginacaoContato.setPageFactory(this::createPageContato);
+
+                    // Mostra a paginação
+                    paginacaoContato.setVisible(true);
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    // Fecha o loading após a consulta
+                    loadingController.fecharLoading(loadingStage);
+                    trocarPaginas(paginacaoContato);
+                }
+            });
+        });
+
+        // Inicia a thread de consulta
+        consultaThread.start();
     }
 
 
 
     @FXML
     public void PesquisarTelefoneContatosBtnEvent(ActionEvent event) throws IOException {
-//        LoadingController loadingController = new LoadingController();
-//        Stage loadingStage = new Stage();
-//
-//        // Inicia o loading
-//        loadingController.iniciaLoading(loadingStage);
-//
-//        // Cria uma thread para realizar a consulta em segundo plano
-//        Thread consultaThread = new Thread(() -> {
-//            List<TelefoneContato> listaTelefoneContatos;
-//            if (!pesquisaTelefoneContatoTf.getText().isEmpty()) {
-//                listaTelefoneContatos = telefoneContatoRepository.findByNomeContainingIgnoreCaseOrderByNomeAsc(pesquisaTelefoneContatoTf.getText());
-//            } else {
-//                listaTelefoneContatos = telefoneContatoRepository.findAllByOrderByNomeAsc();
-//            }
-//
-//            // Atualiza a UI na thread principal após a consulta
-//            Platform.runLater(() -> {
-//                try {
-//                    // Preenche a lista paginada
-//                    paginatedTelefoneContatos.clear();
-//                    for (int i = 0; i < listaTelefoneContatos.size(); i++) {
-//                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/TelefoneContatoList.fxml"));
-//                        BorderPane borderPane = fxmlLoader.load();
-//
-//                        TelefoneContatoListController telefoneContatosListController = fxmlLoader.getController();
-//                        telefoneContatosListController.setData((TelefoneContato) listaTelefoneContatos.get(i));
-//
-//                        paginatedTelefoneContatos.add(borderPane);
-//                    }
-//
-//                    int pageCount = (int) Math.ceil((double) paginatedTelefoneContatos.size() / itensPorPaginaTelefoneContato);
-//                    paginacaoTelefoneContato.setPageCount(pageCount);
-//                    paginacaoTelefoneContato.setCurrentPageIndex(0);
-//                    paginacaoTelefoneContato.setPageFactory(this::createPageTelefoneContato);
-//
-//                    // Mostra a paginação
-//                    paginacaoTelefoneContato.setVisible(true);
-//
-//
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                } finally {
-//                    // Fecha o loading após a consulta
-//                    loadingController.fecharLoading(loadingStage);
-//                    trocarPaginas(paginacaoTelefoneContato);
-//                }
-//            });
-//        });
-//
-//        // Inicia a thread de consulta
-//        consultaThread.start();
+        LoadingController loadingController = new LoadingController();
+        Stage loadingStage = new Stage();
+
+        // Inicia o loading
+        loadingController.iniciaLoading(loadingStage);
+
+        // Cria uma thread para realizar a consulta em segundo plano
+        Thread consultaThread = new Thread(() -> {
+            List<TelefoneContato> listaTelefoneContatos;
+            if (!pesquisaTelefoneContatoTf.getText().isEmpty()) {
+                listaTelefoneContatos = telefoneContatoRepository.findByTelefoneContainingIgnoreCaseOrderByDddAsc(pesquisaTelefoneContatoTf.getText());
+            } else {
+                listaTelefoneContatos = telefoneContatoRepository.findAllByOrderByTelefoneAsc();
+            }
+
+            // Atualiza a UI na thread principal após a consulta
+            Platform.runLater(() -> {
+                try {
+                    // Preenche a lista paginada
+                    paginatedTelefoneContatos.clear();
+                    for (int i = 0; i < listaTelefoneContatos.size(); i++) {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/TelefoneContatoList.fxml"));
+                        BorderPane borderPane = fxmlLoader.load();
+
+                        TelefoneContatoListController telefoneContatosListController = fxmlLoader.getController();
+                        telefoneContatosListController.setData((TelefoneContato) listaTelefoneContatos.get(i));
+
+                        paginatedTelefoneContatos.add(borderPane);
+                    }
+
+                    int pageCount = (int) Math.ceil((double) paginatedTelefoneContatos.size() / itensPorPaginaTelefoneContato);
+                    paginacaoTelefoneContato.setPageCount(pageCount);
+                    paginacaoTelefoneContato.setCurrentPageIndex(0);
+                    paginacaoTelefoneContato.setPageFactory(this::createPageTelefoneContato);
+
+                    // Mostra a paginação
+                    paginacaoTelefoneContato.setVisible(true);
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    // Fecha o loading após a consulta
+                    loadingController.fecharLoading(loadingStage);
+                    trocarPaginas(paginacaoTelefoneContato);
+                }
+            });
+        });
+
+        // Inicia a thread de consulta
+        consultaThread.start();
     }
 
     private void trocarPaginas(Pagination paginacao) {
