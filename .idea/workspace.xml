@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="melhorando sistema">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/ThePhoneBook.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/ThePhoneBook.run.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.run/ThePhoneBook.run.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
     "last_opened_file_path": "C:/Users/Guilherme.peritto/Documents/Projetos/ThePhoneBook",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -73,6 +75,7 @@
       <recent name="C:\Users\perit\Documents\Projetos\PurpleGym\src\main\resources\View" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\perit\Documents\Projetos\ThePhoneBook\.run" />
       <recent name="C:\Users\perit\Documents\Projetos\PurpleGym\src\main\resources\Image" />
     </key>
   </component>
@@ -102,6 +105,7 @@
       <workItem from="1701969164515" duration="4117000" />
       <workItem from="1701982882987" duration="853000" />
       <workItem from="1702302019310" duration="14192000" />
+      <workItem from="1702330429956" duration="1024000" />
     </task>
     <task id="LOCAL-00001" summary="Ajustes Cor da aplicação">
       <option name="closed" value="true" />
