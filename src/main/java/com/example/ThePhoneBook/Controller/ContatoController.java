@@ -32,9 +32,6 @@ import java.nio.file.StandardCopyOption;
 public class ContatoController {
 
     @FXML
-    private Button btnEditarImagem;
-
-    @FXML
     private TextField observacaoLbl;
 
     @FXML
@@ -65,20 +62,13 @@ public class ContatoController {
     @Autowired
     ContatoRepository contatoRepository;
 
-    public void initialize() {
-        btnEditarImagem.setVisible(false);
-        // Adicionar evento para controlar a visibilidade do botão de editar imagem
-        backgroundImagem.setOnMouseEntered(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                btnEditarImagem.setVisible(true);
-            }
-        });
 
-        backgroundImagem.setOnMouseExited(new EventHandler<MouseEvent>() {
+    @FXML
+    public void initialize() {
+        backgroundImagem.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                btnEditarImagem.setVisible(false);
+                uploadImagem(); // Chame o método uploadImagem quando a imagem for clicada
             }
         });
     }
@@ -112,7 +102,7 @@ public class ContatoController {
     }
 
     @FXML
-    public void uploadImagem(ActionEvent event) {
+    public void uploadImagem() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Imagens", "*.png", "*.jpg", "*.jpeg", "*.gif")
@@ -158,6 +148,7 @@ public class ContatoController {
 
     private void voltar(ActionEvent event) {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        contato = new Contato();
         stage.close();
     }
 
@@ -188,7 +179,6 @@ public class ContatoController {
         if (desabilitar) {
             nomeLbl.setDisable(true);
             observacaoLbl.setDisable(true);
-            btnEditarImagem.setDisable(true);
             btnSalvar.setDisable(true);
         }
     }

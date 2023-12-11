@@ -77,11 +77,6 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "Contato{" +
-                "idContato=" + idContato +
-                ", descricao='" + descricao + '\'' +
-                ", dataNascimento=" + dataNascimento +
-                ", observacao='" + observacao + '\'' +
-                '}';
+        return descricao;
     }
 }

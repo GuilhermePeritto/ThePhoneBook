@@ -20,15 +20,19 @@ public class TelefoneContato {
     @Column(name = "emails", length = 250)
     private String email;
 
-    public TelefoneContato(Long idTelefoneContato, String telefone, String ddd, String email) {
+    @ManyToOne
+    @JoinColumn(name = "idcontato")
+    private Contato contato;
+
+    public TelefoneContato() {
+    }
+
+    public TelefoneContato(Long idTelefoneContato, String telefone, String ddd, String email, Contato contato) {
         this.idTelefoneContato = idTelefoneContato;
         this.telefone = telefone;
         this.ddd = ddd;
         this.email = email;
-    }
-
-    public TelefoneContato() {
-
+        this.contato = contato;
     }
 
     public Long getIdTelefoneContato() {
@@ -63,6 +67,14 @@ public class TelefoneContato {
         this.email = email;
     }
 
+    public Contato getContato() {
+        return contato;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
+    }
+
     @Override
     public String toString() {
         return "TelefoneContato{" +
@@ -70,6 +82,7 @@ public class TelefoneContato {
                 ", telefone='" + telefone + '\'' +
                 ", ddd='" + ddd + '\'' +
                 ", email='" + email + '\'' +
+                ", contato=" + contato +
                 '}';
     }
 }

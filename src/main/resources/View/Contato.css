@@ -3,9 +3,9 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
     -fx-background-position: center;
-    -fx-background-radius: 10;
+    -fx-background-radius: 100;
     -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
-    -fx-border-radius: 10;
+    -fx-border-radius: 100;
 }
 
 .background-button {

@@ -150,3 +150,37 @@
     -fx-background-color: #15152f;
     -fx-text-fill: white;
 }
+
+.combo-contato {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+    -fx-text-fill: WHITE;
+}
+
+.combo-contato .list-cell {
+    -fx-background-color: #15152f;
+    -fx-background-radius: 20;
+    -fx-text-fill: WHITE;
+}
+
+.combo-contato .list-view {
+    -fx-background-color: #15152f;
+    -fx-border-color: linear-gradient(to right, #1f2a62, #532c89, #cd3bca);
+}
+
+.combo-contato .list-view .scroll-bar {
+    -fx-background-color: #15152f;
+}
+
+.combo-contato .list-view .scroll-bar:vertical .track,
+.combo-contato .list-view .scroll-bar:horizontal .track {
+    -fx-background-color: #15152f;
+}
+
+.combo-contato .list-view .scroll-bar:vertical .thumb,
+.combo-contato .list-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #532c89;
+}
+
