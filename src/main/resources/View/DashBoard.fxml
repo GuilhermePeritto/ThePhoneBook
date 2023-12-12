@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.calendarfx.view.page.MonthPage?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -36,6 +37,21 @@
                </graphic>
                <VBox.margin>
                   <Insets top="70.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="agendaBtn" centerShape="false" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#AgendaBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0">
+                     <image>
+                        <Image url="@../Image/agenda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="10.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="contatosBtn" centerShape="false" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#TelefoneContatosBtnEvent" prefHeight="45.0" prefWidth="54.0" styleClass="background-icones" stylesheets="@DashBoard.css" textFill="WHITE">
@@ -232,7 +248,7 @@
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="dashBoardPerfil" layoutX="10.0" layoutY="10.0" prefHeight="895.0" prefWidth="1850.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <AnchorPane fx:id="dashBoardHome" layoutX="10.0" layoutY="10.0" prefHeight="895.0" prefWidth="1850.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="dashBoardHome" layoutX="10.0" layoutY="10.0" prefHeight="895.0" prefWidth="1850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <AnchorPane fx:id="dashBoardListContato" prefHeight="493.0" prefWidth="691.0" styleClass="background-dashboard" stylesheets="@DashBoard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <HBox fillHeight="false" layoutX="7.0" layoutY="14.0" prefHeight="56.0" prefWidth="682.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="14.0">
@@ -341,6 +357,10 @@
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="dashBoardRelContatos" layoutX="-1.0" layoutY="10.0" prefHeight="506.4" prefWidth="695.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="dashBoardAgenda" layoutX="11.0" layoutY="28.0" prefHeight="520.0" prefWidth="709.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <MonthPage fx:id="agenda" layout="SWIMLANE" layoutX="111.0" layoutY="30.0" prefHeight="491.0" prefWidth="689.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
                </children>
                <opaqueInsets>
                   <Insets />

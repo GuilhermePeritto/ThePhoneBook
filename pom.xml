@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>javafx</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>PurpleGym</name>
-    <description>PurpleGym</description>
+    <name>ThePhoneBook</name>
+    <description>ThePhoneBook</description>
     <properties>
         <java.version>21</java.version>
     </properties>
@@ -64,6 +64,19 @@
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
             <version>6.20.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.calendarfx/calendar -->
+        <!-- https://mvnrepository.com/artifact/com.calendarfx/view -->
+        <dependency>
+            <groupId>com.calendarfx</groupId>
+            <artifactId>view</artifactId>
+            <version>11.12.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>javafx</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

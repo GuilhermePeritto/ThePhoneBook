@@ -1,5 +1,10 @@
 package com.example.ThePhoneBook.Controller;
 
+import com.calendarfx.model.Calendar;
+import com.calendarfx.model.CalendarSource;
+import com.calendarfx.model.Entry;
+import com.calendarfx.view.CalendarView;
+import com.calendarfx.view.page.MonthPage;
 import com.example.ThePhoneBook.Main;
 import com.example.ThePhoneBook.Model.Contato;
 import com.example.ThePhoneBook.Model.TelefoneContato;
@@ -31,10 +36,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 @Component
 public class DashBoardController {
+
+    @FXML
+    public MonthPage agenda;
 
     public static DashBoardController dashBoardController;
 
@@ -127,6 +136,12 @@ public class DashBoardController {
     @Autowired
     public ContatoRepository contatoRepository;
 
+    @FXML
+    public AnchorPane dashBoardAgenda;
+
+    @FXML
+    public Button agendaBtn;
+
     public static Scene dashBoardView;
 
     @FXML
@@ -142,6 +157,7 @@ public class DashBoardController {
 
     @FXML
     public void initialize() {
+
         // Adicione ou ajuste outros inicializadores aqui, se necessário
         menuSlider.setPrefWidth(ORIGINAL_WIDTH);
         setMouseEvents();
@@ -206,6 +222,7 @@ public class DashBoardController {
         telefoneContatosBtn.setText("Telefones");
         homeBtn.setText("Home");
         logoutBtn.setText("Logout");
+        agendaBtn.setText("Agenda");
     }
 
     private void shrinkMenuSlider() {
@@ -216,6 +233,7 @@ public class DashBoardController {
         telefoneContatosBtn.setText("");
         homeBtn.setText("");
         logoutBtn.setText("");
+        agendaBtn.setText("");
     }
 
     @FXML
@@ -255,6 +273,14 @@ public class DashBoardController {
     private void ContatosBtnEvent(ActionEvent event) {
         this.showPane(dashBoardContato);
         moduloLbl.setText("Telefones");
+    }
+
+    @FXML
+    private void AgendaBtnEvent(ActionEvent event) {
+        this.showPane(dashBoardAgenda);
+        moduloLbl.setText("Agenda");
+        AgendaController agendaController = new AgendaController();
+        agendaController.Calcular(contatoRepository.findAllByOrderByDescricaoAsc(), agenda);
     }
 
     @FXML
@@ -469,6 +495,9 @@ public class DashBoardController {
         dashBoardPerfil.setVisible(pane == dashBoardPerfil);
         dashBoardListTelefoneContato.setVisible(pane == dashBoardListTelefoneContato);
         dashBoardListContato.setVisible(pane == dashBoardListContato);
+        dashBoardAgenda.setVisible(pane == dashBoardAgenda);
+        agenda.setVisible(pane == dashBoardAgenda);
+
     }
 
 
@@ -506,6 +535,10 @@ public class DashBoardController {
         KeyValue keyValuesLine = new KeyValue(lineEspacamento.endXProperty(), targetWidth);
         KeyFrame keyFrameLine = new KeyFrame(Duration.millis(300), keyValuesLine);
         timeline.getKeyFrames().add(keyFrameLine);
+
+        KeyValue keyValuesAgenda = new KeyValue(agendaBtn.prefWidthProperty(), targetWidth);
+        KeyFrame keyFrameAgenda = new KeyFrame(Duration.millis(300), keyValuesAgenda);
+        timeline.getKeyFrames().add(keyFrameAgenda);
 
         timeline.play();
     }
