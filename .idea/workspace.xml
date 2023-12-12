@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="melhorando sistema">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" afterDir="false" />
-    </list>
+    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="melhorando sistema" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702420005313</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="melhorando sistema">
+      <option name="closed" value="true" />
+      <created>1702424138336</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702424138336</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
