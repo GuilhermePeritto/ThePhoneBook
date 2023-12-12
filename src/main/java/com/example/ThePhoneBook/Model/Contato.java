@@ -2,8 +2,10 @@ package com.example.ThePhoneBook.Model;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.Cascade;
+import org.springframework.cglib.core.Local;
 
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class Contato {
     @Column(name = "descri")
     private String descricao;
     @Column(name = "datnas")
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
     @Column(name = "observ")
     private String observacao;
 
@@ -33,7 +35,7 @@ public class Contato {
 
     }
 
-    public Contato(BigInteger idContato, String descricao, Date dataNascimento, String observacao, String localImagem) {
+    public Contato(BigInteger idContato, String descricao, LocalDate dataNascimento, String observacao, String localImagem) {
         this.idContato = idContato;
         this.descricao = descricao;
         this.dataNascimento = dataNascimento;
@@ -57,11 +59,11 @@ public class Contato {
         this.descricao = descricao;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

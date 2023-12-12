@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -36,6 +37,9 @@ public class ContatoController {
 
     @FXML
     private ImageView imgContato;
+
+    @FXML
+    private DatePicker dataNLbl;
 
     @FXML
     private TextField nomeLbl;
@@ -94,6 +98,7 @@ public class ContatoController {
         observacaoLbl.setText(contato.getObservacao());
         imgContato.setImage(new Image("file:" + contato.getLocalImagem()));
         idContato = contato.getIdContato();
+        dataNLbl.setValue(contato.getDataNascimento());
         setData(contato);
     }
 
@@ -141,15 +146,20 @@ public class ContatoController {
         contato.setDescricao(nomeLbl.getText());
         contato.setObservacao(observacaoLbl.getText());
         contato.setLocalImagem(LocalDaImagem);
+        contato.setDataNascimento(dataNLbl.getValue());
         contatoRepository.save(contato);
+        AvisoController avisoController = new AvisoController();
+        avisoController.showAlerta(new Stage(), "Contato salvo com sucesso!", false);
         contato = new Contato();
         voltar(event);
     }
 
-    private void voltar(ActionEvent event) {
+    private void voltar(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         contato = new Contato();
         stage.close();
+        DashBoardController dashBoardController = new DashBoardController();
+        dashBoardController.getDashBoardController().PesquisarTelefoneContatosBtnEvent(new ActionEvent());
     }
 
     @FXML
@@ -180,6 +190,7 @@ public class ContatoController {
             nomeLbl.setDisable(true);
             observacaoLbl.setDisable(true);
             btnSalvar.setDisable(true);
+            dataNLbl.setDisable(true);
         }
     }
 
