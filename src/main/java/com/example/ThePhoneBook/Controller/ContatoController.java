@@ -143,9 +143,11 @@ public class ContatoController {
 
     @FXML
     public void salvarContato(ActionEvent event) throws IOException {
+        if (LocalDaImagem != null) {
+            contato.setLocalImagem(LocalDaImagem);
+        }
         contato.setDescricao(nomeLbl.getText());
         contato.setObservacao(observacaoLbl.getText());
-        contato.setLocalImagem(LocalDaImagem);
         contato.setDataNascimento(dataNLbl.getValue());
         contatoRepository.save(contato);
         AvisoController avisoController = new AvisoController();
