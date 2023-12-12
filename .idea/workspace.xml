@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="adicionando funcionalidade proposta pelo professor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Core/Core.java" beforeDir="false" />
+    <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="melhorando sistema">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702404777770</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="melhorando sistema">
+      <option name="closed" value="true" />
+      <created>1702420005313</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702420005313</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,9 +268,9 @@
     <MESSAGE value="subindo cruds" />
     <MESSAGE value="alterando classes" />
     <MESSAGE value="ajustando cruds" />
-    <MESSAGE value="melhorando sistema" />
     <MESSAGE value="adicionando funcionalidade proposta pelo professor" />
-    <option name="LAST_COMMIT_MESSAGE" value="adicionando funcionalidade proposta pelo professor" />
+    <MESSAGE value="melhorando sistema" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhorando sistema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,11 +279,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoController.java</url>
           <line>113</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/AgendaController.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
