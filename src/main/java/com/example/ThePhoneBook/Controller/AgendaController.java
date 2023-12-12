@@ -15,6 +15,7 @@ import java.util.Set;
 public class AgendaController {
 
     // Método para calcular e exibir aniversários na agenda
+    // Método para calcular e exibir aniversários na agenda
     public void Calcular(List<Contato> listaContatos, MonthPage agenda) {
         // Criar um conjunto para rastrear as datas já processadas
         Set<LocalDate> datasProcessadas = new HashSet<>();
@@ -29,16 +30,13 @@ public class AgendaController {
                 int mesAniversario = dataNascimento.getMonthValue();
                 int diaAniversario = dataNascimento.getDayOfMonth();
 
-                // Obtém a data atual para referência
-                LocalDate hoje = LocalDate.now();
-
-                // Itera por cada ano até o final do século
-                for (int ano = hoje.getYear(); ano <= hoje.getYear() + 100; ano++) {
+                // Itera por cada ano no intervalo desejadoadm
+                for (int ano = 1900; ano <= 2100; ano++) {
                     // Cria a entrada para o aniversário do ano atual
                     LocalDate aniversarioAtual = LocalDate.of(ano, mesAniversario, diaAniversario);
 
                     // Se o aniversário já passou este ano, usa o próximo ano
-                    if (hoje.isAfter(aniversarioAtual)) {
+                    if (LocalDate.now().isAfter(aniversarioAtual)) {
                         aniversarioAtual = aniversarioAtual.plusYears(1);
                     }
 
