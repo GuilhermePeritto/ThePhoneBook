@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="adicionando funcionalidade proposta pelo professor">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/AgendaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/AgendaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Core/Core.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +273,17 @@
           <line>113</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/AgendaController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.calendarfx.view.page.MonthPage" memberName="showDate" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

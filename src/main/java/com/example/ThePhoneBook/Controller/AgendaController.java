@@ -17,6 +17,9 @@ public class AgendaController {
     // Método para calcular e exibir aniversários na agenda
     // Método para calcular e exibir aniversários na agenda
     public void Calcular(List<Contato> listaContatos, MonthPage agenda) {
+
+        agenda.getCalendarSources().forEach(source -> source.getCalendars().forEach(Calendar::clear));
+
         // Criar um conjunto para rastrear as datas já processadas
         Set<LocalDate> datasProcessadas = new HashSet<>();
 
