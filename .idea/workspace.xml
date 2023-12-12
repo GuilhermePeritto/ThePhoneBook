@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="44669582-089b-4fbc-b058-4092864d9b9b" name="Changes" comment="melhorando sistema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/ContatoListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/DashBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/DashBoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Controller/TelefoneContatoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Model/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Repository/ContatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Repository/ContatoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Repository/TelefoneContatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ThePhoneBook/Repository/TelefoneContatoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/TelefoneContatoList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/TelefoneContatoList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ContatoList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ContatoList.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +222,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajustes Cor da aplicação" />

@@ -30,10 +30,20 @@ public class ContatoListController {
 
     public void initialize() {
         // Configurar os itens do MenuButton
+        MenuItem inspecionarItem = new MenuItem("Inspecionar");
         MenuItem editarItem = new MenuItem("Editar");
         MenuItem excluirItem = new MenuItem("Excluir");
 
+
         // Configurar os eventos dos itens
+        inspecionarItem.setOnAction(event -> {
+            try {
+                handleInspecionarContato();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
         editarItem.setOnAction(event -> {
             try {
                 handleEditarContato();
@@ -50,9 +60,17 @@ public class ContatoListController {
         });
 
         // Adicionar os itens ao MenuButton
-        menuButtonMaisOp.getItems().addAll(editarItem, excluirItem);
+        menuButtonMaisOp.getItems().addAll(inspecionarItem,editarItem, excluirItem);
 
         // ... (outros códigos)
+    }
+
+    private void handleInspecionarContato() throws IOException {
+        // Lógica para inspecionar o contato
+        InspecionarContatoBtnEvent(new ActionEvent());
+
+        // Ocultar o MenuButton após a seleção
+        menuButtonMaisOp.hide();
     }
 
     private void handleEditarContato() throws IOException {
@@ -98,4 +116,9 @@ public class ContatoListController {
         contatoController.setContato(null);
     }
 
+    @FXML
+    private void FiltrarTelefoneContatoBtnEvent(ActionEvent event) throws IOException {
+      DashBoardController dashBoardController = new DashBoardController();
+        dashBoardController.getDashBoardController().filtrarTelefoneContato(contato);
+    }
 }

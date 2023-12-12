@@ -1,9 +1,11 @@
 package com.example.ThePhoneBook.Model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
 
 import java.math.BigInteger;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "contat")
@@ -22,6 +24,10 @@ public class Contato {
     private String observacao;
 
     private String localImagem;
+
+    @OneToMany(mappedBy = "contato", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    private List<TelefoneContato> contels;
 
     public Contato() {
 

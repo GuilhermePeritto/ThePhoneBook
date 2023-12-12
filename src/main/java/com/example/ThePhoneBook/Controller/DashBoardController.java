@@ -36,6 +36,8 @@ import java.util.List;
 @Component
 public class DashBoardController {
 
+    public static DashBoardController dashBoardController;
+
     @FXML
     private VBox menuSlider;
 
@@ -85,7 +87,7 @@ public class DashBoardController {
     private Label usuarioLogadoLbl;
 
     @FXML
-    private AnchorPane dashBoardListTelefoneContato;
+    public AnchorPane dashBoardListTelefoneContato;
 
     @FXML
     private Button adicionarTelefoneContatoBtn;
@@ -107,7 +109,6 @@ public class DashBoardController {
 
     private Integer itensPorPaginaTelefoneContato = 15;
     private Integer itensPorPaginaContato = 15;
-
     private Integer contatosPorPagina = 8;
 
     private ObservableList<Node> paginatedTelefoneContatos;
@@ -130,6 +131,8 @@ public class DashBoardController {
 
     @FXML
     public AnchorPane dashBoardRelTelefoneContatos;
+
+    private ContatoListController contatoListController;
 
     private static final double ORIGINAL_WIDTH = 23.0;
     private static final double EXPANDED_WIDTH = 250.0;
@@ -344,7 +347,8 @@ public class DashBoardController {
         Thread consultaThread = new Thread(() -> {
             List<TelefoneContato> listaTelefoneContatos;
             if (!pesquisaTelefoneContatoTf.getText().isEmpty()) {
-                listaTelefoneContatos = telefoneContatoRepository.findByTelefoneContainingIgnoreCaseOrderByDddAsc(pesquisaTelefoneContatoTf.getText());
+                List<Contato> listaDeIds = contatoRepository.findByDescricaoContainingIgnoreCaseOrderByDescricaoAsc(pesquisaTelefoneContatoTf.getText());
+                listaTelefoneContatos = telefoneContatoRepository.findByContatoInOrderByTelefoneAsc(listaDeIds);
             } else {
                 listaTelefoneContatos = telefoneContatoRepository.findAllByOrderByTelefoneAsc();
             }
@@ -457,7 +461,7 @@ public class DashBoardController {
 
 
 
-    private void showPane(AnchorPane pane) {
+    public void showPane(AnchorPane pane) {
         dashBoardTelefoneContato.setVisible(pane == dashBoardTelefoneContato);
         dashBoardConfiguracao.setVisible(pane == dashBoardConfiguracao);
         dashBoardContato.setVisible(pane == dashBoardContato);
@@ -515,12 +519,74 @@ public class DashBoardController {
         stage.initStyle(StageStyle.DECORATED);
         stage.setMaximized(true);
         stage.show();
-        DashBoardController dashBoardController = fxmlLoader.getController();
+        dashBoardController = fxmlLoader.getController();
         dashBoardController.usuarioLogadoLbl.setText("Olá, " + loginController.getUsuarioLogado().getNome());
     }
 
     public void fecharDashBoard() {
         Stage stage = (Stage) homeBtn.getScene().getWindow();
         stage.close();
+    }
+
+    public DashBoardController getDashBoardController(){
+        return dashBoardController;
+    }
+
+    public void filtrarTelefoneContato(Contato contato) throws IOException {
+        showPane(dashBoardListTelefoneContato);
+        moduloLbl.setText("Telefones");
+        PesquisarTelefoneContatoFiltrado(contato);
+
+    }
+
+    @FXML
+    public void PesquisarTelefoneContatoFiltrado(Contato contato) throws IOException {
+        LoadingController loadingController = new LoadingController();
+        Stage loadingStage = new Stage();
+
+        // Inicia o loading
+        loadingController.iniciaLoading(loadingStage);
+
+        // Cria uma thread para realizar a consulta em segundo plano
+        Thread consultaThread = new Thread(() -> {
+            List<TelefoneContato> listaTelefoneContatos;
+           listaTelefoneContatos = telefoneContatoRepository.findByContatoOrderByTelefoneAsc(contato);
+
+            // Atualiza a UI na thread principal após a consulta
+            Platform.runLater(() -> {
+                try {
+                    // Preenche a lista paginada
+                    paginatedTelefoneContatos.clear();
+                    for (int i = 0; i < listaTelefoneContatos.size(); i++) {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("View/TelefoneContatoList.fxml"));
+                        BorderPane borderPane = fxmlLoader.load();
+
+                        TelefoneContatoListController telefoneContatosListController = fxmlLoader.getController();
+                        telefoneContatosListController.setData((TelefoneContato) listaTelefoneContatos.get(i));
+
+                        paginatedTelefoneContatos.add(borderPane);
+                    }
+
+                    int pageCount = (int) Math.ceil((double) paginatedTelefoneContatos.size() / itensPorPaginaTelefoneContato);
+                    paginacaoTelefoneContato.setPageCount(pageCount);
+                    paginacaoTelefoneContato.setCurrentPageIndex(0);
+                    paginacaoTelefoneContato.setPageFactory(this::createPageTelefoneContato);
+
+                    // Mostra a paginação
+                    paginacaoTelefoneContato.setVisible(true);
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    // Fecha o loading após a consulta
+                    loadingController.fecharLoading(loadingStage);
+                    trocarPaginas(paginacaoTelefoneContato);
+                }
+            });
+        });
+
+        // Inicia a thread de consulta
+        consultaThread.start();
     }
 }
