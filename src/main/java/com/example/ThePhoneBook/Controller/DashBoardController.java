@@ -222,7 +222,7 @@ public class DashBoardController {
         telefoneContatosBtn.setText("Telefones");
         homeBtn.setText("Home");
         logoutBtn.setText("Logout");
-        agendaBtn.setText("Agenda");
+        agendaBtn.setText("Aniversariantes");
     }
 
     private void shrinkMenuSlider() {
@@ -278,7 +278,7 @@ public class DashBoardController {
     @FXML
     private void AgendaBtnEvent(ActionEvent event) {
         this.showPane(dashBoardAgenda);
-        moduloLbl.setText("Agenda");
+        moduloLbl.setText("Aniversariantes");
         AgendaController agendaController = new AgendaController();
         agendaController.Calcular(contatoRepository.findAllByOrderByDescricaoAsc(), agenda);
     }

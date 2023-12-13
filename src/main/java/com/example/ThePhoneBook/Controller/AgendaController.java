@@ -34,7 +34,7 @@ public class AgendaController {
                 int diaAniversario = dataNascimento.getDayOfMonth();
 
                 // Itera por cada ano no intervalo desejadoadm
-                for (int ano = 1900; ano <= 2100; ano++) {
+                for (int ano = 2000; ano <= 2100; ano++) {
                     // Cria a entrada para o aniversário do ano atual
                     LocalDate aniversarioAtual = LocalDate.of(ano, mesAniversario, diaAniversario);
 
