@@ -5,7 +5,6 @@ import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
 import com.calendarfx.view.page.MonthPage;
-import com.example.ThePhoneBook.Core.ImprimirRelatorio;
 import com.example.ThePhoneBook.Main;
 import com.example.ThePhoneBook.Model.Contato;
 import com.example.ThePhoneBook.Model.TelefoneContato;
@@ -41,14 +40,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 
 @Component
 public class DashBoardController {
-    ImprimirRelatorio relatorio = new ImprimirRelatorio();
-
     @FXML
     public MonthPage agenda;
 
@@ -625,28 +625,5 @@ public class DashBoardController {
 
         // Inicia a thread de consulta
         consultaThread.start();
-    }
-    @FXML
-    public void abrirRelatorioContatos() throws IOException, JRException {
-        String jasperPath = "src/main/java/com/example/ThePhoneBook/Relatorios/RelatorioPai.jasper";
-        JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(jasperPath);
-
-        // Preencher os parâmetros, se houver
-        HashMap<String, Object> parameters = new HashMap<>();
-
-        parameters.put("contat", contatoRepository.findAllByOrderByDescricaoAsc());
-
-        // Criar uma fonte de dados (DataSource). Exemplo com uma coleção vazia.
-        JRDataSource dataSource = new JREmptyDataSource();
-
-        // Preencher e compilar o relatório
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
-
-        // Exibir o relatório (pode ser substituído por impressão, exportação, etc.)
-        JasperViewer.viewReport(jasperPrint, false);
-    }
-
-    @FXML
-    public void abrirRelatorioTelefoneContatos() throws IOException {
     }
 }

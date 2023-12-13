@@ -12,15 +12,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="501.0" prefWidth="975.0" styleClass="background-registrar" stylesheets="@Registrar.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.RegistrarController">
+<BorderPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="501.0" prefWidth="975.0" styleClass="background-registrar" stylesheets="@Registrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.RegistrarController">
    <center>
       <AnchorPane layoutX="342.0" prefHeight="520.0" prefWidth="571.0" styleClass="background-registrar" stylesheets="@Registrar.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="420.0" fitWidth="262.0" layoutX="16.0" layoutY="50.0" opacity="0.13">
-               <image>
-                  <Image url="@../Image/Plogo.png" />
-               </image>
-            </ImageView>
             <TextField fx:id="lblNome" layoutX="155.0" layoutY="159.0" prefHeight="37.0" prefWidth="328.0" promptText="Insira seu nome" styleClass="textfield-invisivel" stylesheets="@Registrar.css" />
             <TextField fx:id="lblEmail" layoutX="155.0" layoutY="222.0" prefHeight="37.0" prefWidth="328.0" promptText="Insira seu e-mail" styleClass="textfield-invisivel" stylesheets="@Registrar.css" />
             <PasswordField fx:id="lblSenha" layoutX="155.0" layoutY="281.0" prefHeight="37.0" prefWidth="328.0" promptText="Insira uma senha" styleClass="textfield-invisivel" stylesheets="@Registrar.css" />
@@ -109,14 +104,6 @@
                </graphic>
             </Button>
             <ImageView fitHeight="516.0" fitWidth="248.0" layoutX="117.0" layoutY="-15.0">
-               <image>
-                  <Image url="@../Image/quadro%20vertical%20academia.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="37.0" fitWidth="94.0" layoutX="7.0" layoutY="462.0">
-               <image>
-                  <Image url="@../Image/logo.png" />
-               </image>
             </ImageView>
          </children>
       </AnchorPane>

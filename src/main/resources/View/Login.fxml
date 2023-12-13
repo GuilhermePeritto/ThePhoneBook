@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" onMouseReleased="#released" prefHeight="501.0" prefWidth="975.0" style="-fx-background-color: #14161c;" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" onMouseReleased="#released" prefHeight="501.0" prefWidth="975.0" style="-fx-background-color: #14161c;" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ThePhoneBook.Controller.LoginController">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="337.0" BorderPane.alignment="CENTER">
          <children>
@@ -49,7 +49,6 @@
                   <Font name="System Bold" size="9.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="8.0" layoutY="492.0" opacity="0.49" strokeType="OUTSIDE" strokeWidth="0.0" text="© PurpleGym by Guilherme Peritto" />
             <Text fill="WHITE" layoutX="88.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
                <font>
                   <Font name="System Bold" size="10.0" />
@@ -101,11 +100,6 @@
                </graphic>
             </Button>
             <Label id="LblloginError" fx:id="LblAviso" alignment="CENTER" layoutX="106.0" layoutY="342.0" onInputMethodTextChanged="#entrar" prefHeight="35.0" prefWidth="298.0" textFill="#8a0909" />
-            <ImageView fitHeight="63.0" fitWidth="151.0" layoutX="35.0" layoutY="31.0">
-               <image>
-                  <Image url="@../Image/logo.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </center>

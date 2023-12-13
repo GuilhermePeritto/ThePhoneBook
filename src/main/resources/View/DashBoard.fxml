@@ -196,7 +196,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="relatorioTelefoneContatosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" onAction="#abrirRelatorioContatos" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
+                        <Button fx:id="relatorioTelefoneContatosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
@@ -230,7 +230,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button fx:id="relatorioContatosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" onAction="#abrirRelatorioContatos" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
+                        <Button fx:id="relatorioContatosBtn" contentDisplay="TOP" layoutX="282.0" layoutY="27.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="152.0" styleClass="background-icones-dashboard" stylesheets="@DashBoard.css" text="Relatorios" textFill="WHITE">
                            <graphic>
                               <ImageView>
                                  <image>
