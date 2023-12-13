@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioFilho" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="bd69f683-6d7a-45d2-8d6e-79936ead5252">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Hibernate"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="contat" class="java.lang.Long"/>
+	<queryString>
+		<![CDATA[SELECT
+	'(' ||T.dddnum || ')' || ' ' || T.numero AS telefone,	
+	T.emails
+FROM
+	contat C
+JOIN CONTEL T
+	ON C.ID = T.idcontato
+WHERE T.idcontato = $P{contat} 
+GROUP BY C.id, 
+	C.descri,
+	T.dddnum,
+	T.numero,
+	T.emails
+ORDER BY C.DESCRI ASC]]>
+	</queryString>
+	<field name="telefone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telefone"/>
+		<property name="com.jaspersoft.studio.field.label" value="telefone"/>
+	</field>
+	<field name="emails" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="emails"/>
+		<property name="com.jaspersoft.studio.field.label" value="emails"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contel"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="3" width="555" height="14" backcolor="#E6E6E6" uuid="d4ff2284-ea41-4f1f-a368-52a284172974"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="150" height="20" uuid="c5fc6407-bc33-4c81-80d0-a05b20614bb6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57f6e99e-b308-4e21-a87f-306c4f092572"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="445" height="20" uuid="236dd8bc-255f-478e-84dd-4af3b34da7d4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="03f07c8c-2d00-4b88-b6d1-03dcb64ef436"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="150" height="20" uuid="b7e42d46-2b39-4907-99a6-99accb210513">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57f6e99e-b308-4e21-a87f-306c4f092572"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="390" height="20" uuid="e328b8f1-4e3a-4c59-bdd3-b41a2c125db5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="03f07c8c-2d00-4b88-b6d1-03dcb64ef436"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{emails}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2">
+			<line>
+				<reportElement x="0" y="1" width="551" height="1" backcolor="#030303" uuid="27a60143-99c4-49d1-9d77-29e0f01e8634"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>
