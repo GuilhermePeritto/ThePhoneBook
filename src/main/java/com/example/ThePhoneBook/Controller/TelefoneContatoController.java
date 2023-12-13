@@ -110,13 +110,18 @@ public class TelefoneContatoController {
             telefoneContato.setTelefone(telefoneLbl.getText());
             telefoneContato.setDdd(dddLbl.getText());
             telefoneContato.setEmail(emailLbl.getText());
+
+            if(comboContato.getValue() == null) {
+                avisoController.showAlerta(new Stage(), "Selecione um contato!", false);
+                return;
+            }
             telefoneContato.setContato(comboContato.getValue());
             telefoneContatoRepository.save(telefoneContato);
             telefoneContato = new TelefoneContato(); //nao remover pelo amor de deus, se tirar isso, o telefoneContato vai ser criado com o nome do ultimo telefoneContato selecionado
             fecharTela(event);
             avisoController.showAlerta(new Stage(), "TelefoneContato salvo com sucesso!", false);
         } catch (Exception e) {
-            e.printStackTrace();
+
         }
     }
 
